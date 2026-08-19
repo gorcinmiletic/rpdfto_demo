@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#1c1c1c"/>
+  <path d="M50 20 L74 30 V52 C74 68 62 78 50 82 C38 78 26 68 26 52 V30 Z" fill="none" stroke="#d6ac4e" stroke-width="4" stroke-linejoin="round"/>
+  <text x="50" y="58" font-family="Archivo, sans-serif" font-size="20" font-weight="900" fill="#d6ac4e" text-anchor="middle">RPD</text>
+</svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Caveat:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:#ffffff; color:#161616; font-family:'Public Sans',system-ui,sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  :root { --bg:#ffffff; --ink:#161616; --soft:#5a5854; --dark:#1c1c1c; --accent:#b0842a; --accent-d:#d6ac4e; --line:#e6e6e6; --line-d:#3a3a3a; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { color:var(--accent); }
+  h1,h2,h3,h4 { font-family:'Archivo',sans-serif; }
+</style>
+</helmet>
+
+<div style="background:#ffffff;">
+
+  <header style="position:sticky; top:0; z-index:50; background:var(--dark); color:#efece5; border-bottom:1px solid var(--line-d);">
+    <div style="max-width:1240px; margin:0 auto; display:flex; align-items:stretch; justify-content:space-between; flex-wrap:wrap;">
+      <a href="onama.html" style="display:flex; align-items:center; gap:13px; padding:11px 24px;">
+        <img src="images/logo.png" alt="RPD-FTO logo" style="width:46px; height:auto; display:block;">
+        <span style="display:flex; flex-direction:column; line-height:1.25;">
+          <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:1.08rem; letter-spacing:0.02em; color:#faf8f3;">RPD-FTO</span>
+          <span style="font-family:'Public Sans',sans-serif; font-size:0.75rem; font-weight:500; letter-spacing:0.01em; color:#c2beb4;">Fizičko-tehničko obezbeđenje · Vrbas</span>
+        </span>
+      </a>
+      <nav style="display:flex; align-items:stretch; flex-wrap:wrap;">
+        <a href="onama.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:600; color:#faf8f3; border-left:1px solid var(--line-d); border-bottom:2px solid var(--accent-d);">O nama</a>
+        <a href="usluge.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Usluge</a>
+        <a href="obuka.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Centar za obuku</a>
+        <a href="reference.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Referentna lista</a>
+        <a href="galerija.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Galerija</a>
+        <a href="kontakt.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="position:relative; background:#131313; color:#faf8f3; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:url('images/hero.png') center 64%/cover no-repeat;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(9,9,9,0.9) 0%, rgba(9,9,9,0.62) 46%, rgba(9,9,9,0.34) 100%);"></div>
+    <div style="position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--accent);"></div>
+    <div style="position:relative; z-index:2; max-width:1240px; margin:0 auto; padding:clamp(84px,13vw,164px) 24px clamp(60px,8vw,110px); display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(40px,5vw,80px); align-items:start;">
+      <div>
+        <h1 style="margin:0; font-weight:900; font-size:clamp(2.6rem,6.5vw,5rem); line-height:0.98; letter-spacing:-0.03em; color:#faf8f3; text-wrap:balance;">Obezbeđenje kome firme veruju.</h1>
+        <p style="margin:28px 0 0; font-size:clamp(1.1rem,1.8vw,1.35rem); line-height:1.45; color:#c9c5bb; max-width:44ch; font-weight:500;">Firma za fizičko-tehničko obezbeđenje iz Vrbasa. Čuvamo ljude, objekte i vrednosti od 2006.</p>
+        <div style="margin-top:32px;">
+          <a href="kontakt.html" style="display:inline-block; background:var(--accent); color:#1a1503; padding:14px 30px; font-family:'Public Sans',sans-serif; font-weight:700; font-size:0.98rem; border:1px solid var(--accent);">Kontaktirajte nas</a>
+        </div>
+      </div>
+      <div style="border:1px solid #3a3a3a; background:rgba(14,14,14,0.92);">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:13px 20px; background:var(--accent);">
+          <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:0.84rem; letter-spacing:0.05em; text-transform:uppercase; color:#1a1503;">Identitet firme</span>
+          <span style="font-family:'Public Sans',sans-serif; font-size:0.74rem; font-weight:600; color:#3a2f08;">RPD-FTO d.o.o.</span>
+        </div>
+        <div style="padding:16px 20px; border-bottom:1px solid #262626;"><div style="font-family:'Public Sans',sans-serif; font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8f8b80; margin-bottom:4px;">Sedište</div><div style="font-size:1.05rem; font-weight:600; color:#f2efe8;">Save Kovačevića 39, Vrbas</div></div>
+        <div style="padding:16px 20px; border-bottom:1px solid #262626;"><div style="font-family:'Public Sans',sans-serif; font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8f8b80; margin-bottom:4px;">Direktor</div><div style="font-size:1.05rem; font-weight:600; color:#f2efe8;">Ratko Vujadinović</div></div>
+        <div style="padding:16px 20px; border-bottom:1px solid #262626;"><div style="font-family:'Public Sans',sans-serif; font-size:0.68rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8f8b80; margin-bottom:4px;">Osnovano · Članstvo</div><div style="font-size:1.05rem; font-weight:600; color:#f2efe8;">2006. · Član UPOS</div></div>
+        <div style="display:grid; grid-template-columns:1fr 1fr;">
+          <div style="padding:16px 20px; border-right:1px solid #262626;"><div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:1.9rem; line-height:1; color:var(--accent-d);">6</div><div style="font-family:'Public Sans',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#8f8b80; margin-top:6px;">Licenci</div></div>
+          <div style="padding:16px 20px;"><div style="font-family:'Archivo',sans-serif; font-weight:900; font-size:1.9rem; line-height:1; color:var(--accent-d);">5</div><div style="font-family:'Public Sans',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#8f8b80; margin-top:6px;">ISO standarda</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#ffffff;">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(72px,9vw,120px) 24px;">
+      <div style="max-width:780px;">
+        <h2 style="margin:0; font-weight:800; font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.1; letter-spacing:-0.01em; color:var(--ink);">Ko smo i kako radimo</h2>
+        <div style="width:48px; height:3px; background:var(--accent); margin:22px 0 30px;"></div>
+        <p style="margin:0; font-size:clamp(1.2rem,1.9vw,1.5rem); line-height:1.5; color:var(--ink); font-weight:500;">RPD-FTO d.o.o. čuva ljude, objekte i vrednosti. Sedište nam je u Vrbasu, u Ulici Save Kovačevića 39, a firmu vodi Ratko Vujadinović.</p>
+      </div>
+      <div style="margin-top:clamp(40px,5vw,60px); padding-top:clamp(36px,4vw,48px); border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(28px,3vw,48px);">
+        <p style="margin:0; color:var(--soft); font-size:1.05rem;">Počeli smo 2006. Godine 2014. otvorili smo i sopstveni centar za obuku, gde obučavamo i licenciramo ljude za poslove obezbeđenja.</p>
+        <p style="margin:0; color:var(--soft); font-size:1.05rem;">Posao vode ljudi koji ga razumeju, uz saradnju sa stručnjacima za bezbednost. Biramo koga zapošljavamo i pazimo koga šaljemo na teren.</p>
+        <p style="margin:0; color:var(--soft); font-size:1.05rem;">Radimo sa savremenom opremom. Firma koja nas angažuje uvek zna ko joj čuva imovinu i kako.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--dark); color:#faf8f3;">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(72px,9vw,120px) 24px; display:flex; gap:clamp(36px,5vw,72px); align-items:stretch; flex-wrap:wrap;">
+      <div style="flex:1; min-width:300px;">
+        <p style="margin:0; font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(1.7rem,4vw,3rem); line-height:1.16; letter-spacing:-0.01em; color:#faf8f3; max-width:22ch;">Vaša sigurnost i bezbednost treba da budu na prvom mestu.</p>
+        <div style="margin-top:34px;">
+          <div style="font-family:'Caveat',cursive; font-weight:700; font-size:clamp(2rem,4vw,2.7rem); line-height:1; color:var(--accent-d);">Ratko Vujadinović</div>
+          <div style="margin-top:10px; font-family:'Public Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#8f8b80;">Direktor, RPD-FTO</div>
+        </div>
+      </div>
+      <div style="flex:0 0 auto; width:clamp(220px,26vw,320px);">
+        <img src="images/director.png" alt="Ratko Vujadinović, direktor" style="width:100%; height:100%; min-height:300px; object-fit:cover; object-position:top; display:block; border:1px solid #3a3a3a;">
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#ffffff;">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(72px,9vw,120px) 24px;">
+      <div style="max-width:760px; margin-bottom:clamp(36px,4vw,52px);">
+        <h2 style="margin:0 0 16px; font-weight:800; font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.08; letter-spacing:-0.01em; color:var(--ink);">Za svaki posao imamo licencu</h2>
+        <p style="margin:0; color:var(--soft); font-size:1.08rem; max-width:60ch;">Sve što radimo pokriveno je zvaničnom licencom. To je razlog zašto nam firme poveravaju obezbeđenje.</p>
+      </div>
+      <div style="border-top:1px solid var(--ink);">
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">01</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Fizičko-tehnička zaštita sa oružjem</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">02</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Procena rizika u zaštiti lica, imovine i poslovanja</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">03</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Projektovanje i nadzor nad izvođenjem sistema tehničke zaštite</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">04</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Planiranje sistema tehničke zaštite</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">05</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Montaža, puštanje u rad i održavanje sistema tehničke zaštite</span></div>
+        <div style="display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;"><span style="font-family:ui-monospace,Menlo,monospace; font-size:0.85rem; color:var(--accent); min-width:38px; font-weight:600;">06</span><span style="flex:1; min-width:220px; font-size:1.12rem; font-weight:500; color:var(--ink);">Obezbeđenje transporta i prenosa novca i vrednosnih pošiljki</span></div>
+      </div>
+      <div style="margin-top:clamp(32px,4vw,44px);">
+        <p style="margin:0; color:var(--soft); font-size:1.05rem; max-width:70ch;">Pored licenci imamo i ovlašćenje Sektora za vanredne situacije za organizovanje zaštite od požara u objektima druge i treće kategorije ugroženosti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f6f5f1; border-top:1px solid var(--line);">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(72px,9vw,120px) 24px;">
+      <div style="max-width:760px; margin-bottom:clamp(40px,5vw,60px);">
+        <h2 style="margin:0 0 16px; font-weight:800; font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.08; letter-spacing:-0.01em; color:var(--ink);">Sertifikati i standardi</h2>
+        <p style="margin:0; color:var(--soft); font-size:1.08rem; max-width:60ch;">Sistem kvaliteta prati pet standarda, a član smo i Udruženja za privatno obezbeđenje Srbije.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(184px,1fr)); gap:16px;">
+        <sc-for list="{{ certs }}" as="cert" hint-placeholder-count="6">
+          <button onClick="{{ cert.onOpen }}" style="cursor:pointer; border:1px solid var(--line); background:#fff; padding:0; display:flex; flex-direction:column; text-align:left; font-family:'Public Sans',sans-serif; overflow:hidden;" style-hover="border-color:#b0842a;">
+            <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;">
+              <img src="{{ cert.src }}" alt="{{ cert.label }}" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;">
+            </div>
+            <div style="padding:14px 16px;">
+              <div style="font-weight:700; font-size:0.92rem; color:var(--ink);">{{ cert.label }}</div>
+              <div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">{{ cert.sub }}</div>
+              <div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">{{ cert.num }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--dark); color:#cbc8c0;">
+    <div style="max-width:1240px; margin:0 auto; padding:clamp(56px,7vw,88px) 24px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:40px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <img src="images/logo.png" alt="RPD-FTO logo" style="width:46px; height:auto; display:block;">
+            <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:1.05rem; color:#faf8f3;">RPD-FTO</span>
+          </div>
+          <p style="margin:0; color:#9c988f; font-size:0.95rem; max-width:34ch;">Fizičko-tehničko obezbeđenje i monitoring. Vrbas, od 2006.</p>
+        </div>
+        <div>
+          <h4 style="margin:0 0 14px; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:#8f8b80; font-family:ui-monospace,Menlo,monospace;">Stranice</h4>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.95rem;">
+            <a href="onama.html">O nama</a>
+            <a href="usluge.html">Usluge</a>
+            <a href="obuka.html">Centar za obuku</a>
+            <a href="reference.html">Referentna lista</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="margin:0 0 14px; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:#8f8b80; font-family:ui-monospace,Menlo,monospace;">Kontakt</h4>
+          <p style="margin:0 0 12px; color:#cbc8c0; font-size:0.95rem;">Save Kovačevića 39<br>Vrbas, Srbija</p>
+          <div style="display:flex; flex-direction:column; gap:8px; font-size:0.95rem;">
+            <a href="tel:+381021701694" style="color:#cbc8c0;">021 701694</a>
+            <a href="mailto:office@rpdfto.com" style="color:#cbc8c0;">office@rpdfto.com</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="margin:0 0 14px; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:#8f8b80; font-family:ui-monospace,Menlo,monospace;">Dežurni centar</h4>
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+            <span style="width:8px; height:8px; border-radius:50%; background:var(--accent-d); display:inline-block;"></span>
+            <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:1.3rem; color:#faf8f3;">24/7</span>
+          </div>
+          <a href="tel:+381062533016" style="display:inline-block; font-family:'Archivo',sans-serif; font-weight:700; font-size:1.05rem; color:#faf8f3; margin-bottom:8px;">062 533016</a>
+          <p style="margin:0; color:#9c988f; font-size:0.95rem; max-width:26ch;">Kontrolni centar radi svaki dan, bez prekida.</p>
+        </div>
+      </div>
+      <div style="margin-top:48px; padding-top:24px; border-top:1px solid #363636; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; color:#7f7c74; font-size:0.85rem;">
+        <span>© 2026 RPD-FTO d.o.o. Vrbas</span>
+        <span>Član Udruženja za privatno obezbeđenje Srbije</span>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ close }}" style="position:fixed; inset:0; z-index:100; background:rgba(12,12,12,0.9); display:flex; align-items:center; justify-content:center; padding:clamp(20px,5vw,56px);">
+      <div style="position:relative; display:flex; flex-direction:column; align-items:center; max-width:800px; width:100%;">
+        <button onClick="{{ close }}" style="align-self:flex-end; margin-bottom:14px; background:none; border:1px solid #6a6a6a; color:#faf8f3; font-family:'Public Sans',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.04em; padding:9px 18px; cursor:pointer;">Zatvori ✕</button>
+        <img src="{{ lightbox }}" alt="Sertifikat" style="max-width:100%; max-height:80vh; object-fit:contain; background:#fff; box-shadow:0 16px 50px rgba(0,0,0,0.55); border:6px solid #fff;">
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lightbox: null };
+  renderVals() {
+    const open = (src) => () => this.setState({ lightbox: src });
+    const certs = [
+      { src: 'images/cert-iso-9001.png', label: 'ISO 9001:2015', sub: 'Sistem menadžmenta kvalitetom', num: 'GKSR-0363-QC' },
+      { src: 'images/cert-iso-27001.png', label: 'ISO/IEC 27001:2013', sub: 'Bezbednost informacija', num: 'GKSR-0363-IC' },
+      { src: 'images/cert-iso-45001.png', label: 'ISO 45001:2018', sub: 'Bezbednost i zdravlje na radu', num: 'GKSR-0363-OHC' },
+      { src: 'images/cert-iso-14001.png', label: 'ISO 14001:2015', sub: 'Upravljanje zaštitom životne sredine', num: 'GKSR-0363-EC' },
+      { src: 'images/cert-al2002.png', label: 'SRPS A.L2.002:2015', sub: 'Fizička zaštita — Privredna komora Srbije', num: '023-01/19' },
+      { src: 'images/logo-upos.png', label: 'Član UPOS', sub: 'Udruženje za privatno obezbeđenje Srbije', num: '' },
+    ].map(c => ({ ...c, onOpen: open(c.src) }));
+    return {
+      certs,
+      lightbox: this.state.lightbox,
+      close: () => this.setState({ lightbox: null }),
+    };
+  }
+}
+</script>
+</body>
+</html>
