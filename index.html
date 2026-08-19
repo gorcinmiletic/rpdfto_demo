@@ -1,20 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-<template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" fill="#1c1c1c"/>
-  <path d="M50 20 L74 30 V52 C74 68 62 78 50 82 C38 78 26 68 26 52 V30 Z" fill="none" stroke="#d6ac4e" stroke-width="4" stroke-linejoin="round"/>
-  <text x="50" y="58" font-family="Archivo, sans-serif" font-size="20" font-weight="900" fill="#d6ac4e" text-anchor="middle">RPD</text>
-</svg>
-</template>
-</head>
-<body>
-<x-dc>
-<helmet>
+<title>RPD-FTO d.o.o. Vrbas — O nama</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Caveat:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,14 +15,22 @@
   a { color:inherit; text-decoration:none; }
   a:hover { color:var(--accent); }
   h1,h2,h3,h4 { font-family:'Archivo',sans-serif; }
+  .cert-card { cursor:pointer; border:1px solid var(--line); background:#fff; padding:0; display:flex; flex-direction:column; text-align:left; font-family:'Public Sans',sans-serif; overflow:hidden; transition:border-color .15s; }
+  .cert-card:hover { border-color:var(--accent); }
+  .lb { position:fixed; inset:0; z-index:100; background:rgba(12,12,12,0.9); display:none; align-items:center; justify-content:center; padding:clamp(20px,5vw,56px); }
+  .lb.open { display:flex; }
+  .lb-inner { position:relative; display:flex; flex-direction:column; align-items:center; max-width:800px; width:100%; }
+  .lb img { max-width:100%; max-height:80vh; object-fit:contain; background:#fff; box-shadow:0 16px 50px rgba(0,0,0,0.55); border:6px solid #fff; }
+  .lb-close { align-self:flex-end; margin-bottom:14px; background:none; border:1px solid #6a6a6a; color:#faf8f3; font-family:'Public Sans',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.04em; padding:9px 18px; cursor:pointer; }
 </style>
-</helmet>
+</head>
+<body>
 
 <div style="background:#ffffff;">
 
   <header style="position:sticky; top:0; z-index:50; background:var(--dark); color:#efece5; border-bottom:1px solid var(--line-d);">
     <div style="max-width:1240px; margin:0 auto; display:flex; align-items:stretch; justify-content:space-between; flex-wrap:wrap;">
-      <a href="onama.html" style="display:flex; align-items:center; gap:13px; padding:11px 24px;">
+      <a href="index.html" style="display:flex; align-items:center; gap:13px; padding:11px 24px;">
         <img src="images/logo.png" alt="RPD-FTO logo" style="width:46px; height:auto; display:block;">
         <span style="display:flex; flex-direction:column; line-height:1.25;">
           <span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:1.08rem; letter-spacing:0.02em; color:#faf8f3;">RPD-FTO</span>
@@ -41,7 +38,7 @@
         </span>
       </a>
       <nav style="display:flex; align-items:stretch; flex-wrap:wrap;">
-        <a href="onama.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:600; color:#faf8f3; border-left:1px solid var(--line-d); border-bottom:2px solid var(--accent-d);">O nama</a>
+        <a href="index.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:600; color:#faf8f3; border-left:1px solid var(--line-d); border-bottom:2px solid var(--accent-d);">O nama</a>
         <a href="usluge.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Usluge</a>
         <a href="obuka.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Centar za obuku</a>
         <a href="reference.html" style="display:flex; align-items:center; padding:0 20px; font-size:0.9rem; font-weight:500; color:#c9c5bb; border-left:1px solid var(--line-d);">Referentna lista</a>
@@ -136,18 +133,30 @@
         <p style="margin:0; color:var(--soft); font-size:1.08rem; max-width:60ch;">Sistem kvaliteta prati pet standarda, a član smo i Udruženja za privatno obezbeđenje Srbije.</p>
       </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(184px,1fr)); gap:16px;">
-        <sc-for list="{{ certs }}" as="cert" hint-placeholder-count="6">
-          <button onClick="{{ cert.onOpen }}" style="cursor:pointer; border:1px solid var(--line); background:#fff; padding:0; display:flex; flex-direction:column; text-align:left; font-family:'Public Sans',sans-serif; overflow:hidden;" style-hover="border-color:#b0842a;">
-            <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;">
-              <img src="{{ cert.src }}" alt="{{ cert.label }}" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;">
-            </div>
-            <div style="padding:14px 16px;">
-              <div style="font-weight:700; font-size:0.92rem; color:var(--ink);">{{ cert.label }}</div>
-              <div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">{{ cert.sub }}</div>
-              <div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">{{ cert.num }}</div>
-            </div>
-          </button>
-        </sc-for>
+        <button class="cert-card" onclick="openLb('images/cert-iso-9001.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/cert-iso-9001.png" alt="ISO 9001:2015" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">ISO 9001:2015</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Sistem menadžmenta kvalitetom</div><div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">GKSR-0363-QC</div></div>
+        </button>
+        <button class="cert-card" onclick="openLb('images/cert-iso-27001.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/cert-iso-27001.png" alt="ISO/IEC 27001:2013" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">ISO/IEC 27001:2013</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Bezbednost informacija</div><div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">GKSR-0363-IC</div></div>
+        </button>
+        <button class="cert-card" onclick="openLb('images/cert-iso-45001.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/cert-iso-45001.png" alt="ISO 45001:2018" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">ISO 45001:2018</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Bezbednost i zdravlje na radu</div><div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">GKSR-0363-OHC</div></div>
+        </button>
+        <button class="cert-card" onclick="openLb('images/cert-iso-14001.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/cert-iso-14001.png" alt="ISO 14001:2015" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">ISO 14001:2015</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Upravljanje zaštitom životne sredine</div><div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">GKSR-0363-EC</div></div>
+        </button>
+        <button class="cert-card" onclick="openLb('images/cert-al2002.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/cert-al2002.png" alt="SRPS A.L2.002:2015" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">SRPS A.L2.002:2015</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Fizička zaštita — Privredna komora Srbije</div><div style="font-family:ui-monospace,Menlo,monospace; font-size:0.68rem; letter-spacing:0.04em; color:#9c988f; margin-top:8px;">023-01/19</div></div>
+        </button>
+        <button class="cert-card" onclick="openLb('images/logo-upos.png')">
+          <div style="width:100%; aspect-ratio:5 / 7; background:#fff; border-bottom:1px solid var(--line); overflow:hidden;"><img src="images/logo-upos.png" alt="Član UPOS" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;"></div>
+          <div style="padding:14px 16px;"><div style="font-weight:700; font-size:0.92rem; color:var(--ink);">Član UPOS</div><div style="font-size:0.78rem; color:var(--soft); margin-top:4px; line-height:1.35;">Udruženje za privatno obezbeđenje Srbije</div></div>
+        </button>
       </div>
     </div>
   </section>
@@ -165,7 +174,7 @@
         <div>
           <h4 style="margin:0 0 14px; font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color:#8f8b80; font-family:ui-monospace,Menlo,monospace;">Stranice</h4>
           <div style="display:flex; flex-direction:column; gap:10px; font-size:0.95rem;">
-            <a href="onama.html">O nama</a>
+            <a href="index.html">O nama</a>
             <a href="usluge.html">Usluge</a>
             <a href="obuka.html">Centar za obuku</a>
             <a href="reference.html">Referentna lista</a>
@@ -198,37 +207,20 @@
     </div>
   </footer>
 
-  <sc-if value="{{ lightbox }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ close }}" style="position:fixed; inset:0; z-index:100; background:rgba(12,12,12,0.9); display:flex; align-items:center; justify-content:center; padding:clamp(20px,5vw,56px);">
-      <div style="position:relative; display:flex; flex-direction:column; align-items:center; max-width:800px; width:100%;">
-        <button onClick="{{ close }}" style="align-self:flex-end; margin-bottom:14px; background:none; border:1px solid #6a6a6a; color:#faf8f3; font-family:'Public Sans',sans-serif; font-weight:600; font-size:0.85rem; letter-spacing:0.04em; padding:9px 18px; cursor:pointer;">Zatvori ✕</button>
-        <img src="{{ lightbox }}" alt="Sertifikat" style="max-width:100%; max-height:80vh; object-fit:contain; background:#fff; box-shadow:0 16px 50px rgba(0,0,0,0.55); border:6px solid #fff;">
-      </div>
-    </div>
-  </sc-if>
-
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { lightbox: null };
-  renderVals() {
-    const open = (src) => () => this.setState({ lightbox: src });
-    const certs = [
-      { src: 'images/cert-iso-9001.png', label: 'ISO 9001:2015', sub: 'Sistem menadžmenta kvalitetom', num: 'GKSR-0363-QC' },
-      { src: 'images/cert-iso-27001.png', label: 'ISO/IEC 27001:2013', sub: 'Bezbednost informacija', num: 'GKSR-0363-IC' },
-      { src: 'images/cert-iso-45001.png', label: 'ISO 45001:2018', sub: 'Bezbednost i zdravlje na radu', num: 'GKSR-0363-OHC' },
-      { src: 'images/cert-iso-14001.png', label: 'ISO 14001:2015', sub: 'Upravljanje zaštitom životne sredine', num: 'GKSR-0363-EC' },
-      { src: 'images/cert-al2002.png', label: 'SRPS A.L2.002:2015', sub: 'Fizička zaštita — Privredna komora Srbije', num: '023-01/19' },
-      { src: 'images/logo-upos.png', label: 'Član UPOS', sub: 'Udruženje za privatno obezbeđenje Srbije', num: '' },
-    ].map(c => ({ ...c, onOpen: open(c.src) }));
-    return {
-      certs,
-      lightbox: this.state.lightbox,
-      close: () => this.setState({ lightbox: null }),
-    };
-  }
-}
+
+<div class="lb" id="lb" onclick="closeLb()">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="closeLb()">Zatvori ✕</button>
+    <img id="lb-img" src="" alt="Sertifikat">
+  </div>
+</div>
+
+<script>
+  function openLb(src){var el=document.getElementById('lb');document.getElementById('lb-img').src=src;el.classList.add('open');}
+  function closeLb(){document.getElementById('lb').classList.remove('open');}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 </script>
+
 </body>
 </html>
